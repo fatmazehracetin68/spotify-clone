@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--text);
+  white-space: nowrap;
+  padding: 10px;
+  border-radius: var(--radius);
+  transition: all 0.3s;
+}
+a:hover {
+  background-color: var(--spotify-color);
+  color: black;
+}
+:root {
+  --spotify-color: #18d860;
+  --radius: 10px;
+  --text: rgb(255, 255, 255, 0.78);
+  --card-backround: #282828;
+  --color: #121212;
+}
+body {
+  background-color: black;
+  color: var(--text);
+  display: flex;
+  overflow-x: hidden;
+}
+aside {
+  margin: 10px;
+  background: var(--card-backround);
+  padding: 20px 15px;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: center;
+  height: 97vh;
+}
+aside figure .no-text {
+  display: none;
+}
+aside figure img {
+  max-width: 130px;
+  cursor: pointer;
+}
+aside figure nav {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+}
+aside figure nav a {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+main {
+  background-color: var(--card-backround);
+  width: 100%;
+  margin: 10px;
+  border-radius: var(--radius);
+}
+main header form {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: var(--color);
+  margin: 10px;
+  gap: 40px;
+  border-radius: var(--radius);
+}
+main header form .search-input {
+  position: relative;
+}
+main header form .search-input input {
+  background: black;
+  outline: none;
+  border: none;
+  color: #fff;
+  width: 500px;
+  max-width: 500px;
+  padding: 15px 20px;
+  border-radius: var(--radius);
+}
+main header form .search-input i {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+
+  z-index: 100;
+}
+main header form ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+main header form ul li {
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: 1.7px;
+  color: var(--text);
+  transition: all 0.3;
+}
+main header form ul li:nth-child(4) {
+  background-color: var(--spotify-color);
+  padding: 8px;
+  border-radius: var(--radius);
+}
+main header form ul li:nth-child(4):hover {
+  color: #159845;
+  scale: 0.98;
+}
+main header form ul li:hover {
+  color: #fff;
+}
+#menu {
+  display: none;
+}
+.songs h2 {
+  padding: 20px;
+  cursor: pointer;
+}
+.songs h2:hover {
+  text-decoration: underline;
+}
+
+.songs .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+.songs .list .card {
+  width: 200px;
+  background: #121212;
+  padding: 20px;
+  border-radius: var(--radius);
+  margin: 10px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+.songs .list .card h4 {
+  margin-bottom: 6px;
+}
+.songs .list .card h4:hover {
+  opacity: 1;
+}
+.songs .list .card:hover .play {
+  bottom: 20px;
+  opacity: 1;
+}
+.songs .list .card figure img {
+  width: 100%;
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+}
+.songs .list .card figure {
+  position: relative;
+}
+.songs .list .card figure .play {
+  background: var(--spotify-color);
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  right: 10px;
+  bottom: -20px;
+  border-radius: 50%;
+  transition: all 0.4s;
+  opacity: 0;
+}
+.songs .list .card figure .play:hover {
+  scale: 1.2;
+  background: #159845;
+}
+
+.playing {
+  position: fixed;
+  bottom: 0;
+  background: linear-gradient(to right, black, #01703c);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+.playing .info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.playing .info img {
+  width: 90px;
+  border-radius: 50%;
+}
+.animate {
+  animation: turn 3s infinite linear;
+}
+@keyframes turn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  main header form .search-input input {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 850px) {
+  main header form .search-input input {
+    width: 300px;
+  }
+  main header form .search-input input:focus {
+    box-shadow: 0 0 10px rgb(56, 56, 56);
+  }
+}
+@media screen and (max-width: 800px) {
+  aside figure .no-text {
+    max-width: 40px;
+  }
+  aside figure image {
+    display: none;
+  }
+  aside figure image nav a i {
+    font-size: 25px;
+  }
+  aside figure image nav a i span {
+    display: none;
+  }
+  main header form ul {
+    display: none;
+  }
+}
+@media screen and (max-width: 670px) {
+}

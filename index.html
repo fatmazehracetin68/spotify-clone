@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <aside>
+      <figure>
+        <img src="img/spotify-logo.png" alt="" />
+        <img src="img/no-text.png" alt="" class="no-text" />
+        <nav>
+          <a href="#Home"
+            ><i class="fa-solid fa-house"></i><span>Anasayfa</span></a
+          >
+          <a href="#Search"
+            ><i class="fa-solid fa-magnifying-glass"></i><span>Arama</span></a
+          >
+          <a href="#Library"
+            ><i class="fa-solid fa-compact-disc"></i><span>Kütüphane</span></a
+          >
+          <a href="#PlayList"
+            ><i class="fa-solid fa-music"></i><span>Çalma Lİstesi</span></a
+          >
+          <a href="#TopPopular"
+            ><i class="fa-solid fa-heart"></i><span>Beğenilen Şarkılar</span></a
+          >
+        </nav>
+      </figure>
+    </aside>
+    <main>
+      <header>
+        <form>
+          <div class="search">
+            <div class="search-input">
+              <input type="text" placeholder="Müzik arayın..." />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+          <i class="fa-solid fa-bars" id="menu"></i>
+          <ul>
+            <li>Premium</li>
+            <li>Destek</li>
+            <li>Oturum Aç</li>
+            <li>Kayıt Ol</li>
+          </ul>
+        </form>
+      </header>
+      <div class="songs">
+        <h2>Popüler Müzikler</h2>
+        <div class="list"></div>
+      </div>
+    </main>
+
+    <div class="playing">
+      <div class="info"></div>
+      <audio controls>
+        <source />
+      </audio>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
